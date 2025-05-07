@@ -24,11 +24,11 @@ A machine learning-based image classification application built with Python, Ten
 
 3. Run the container:
    ```bash
-   docker run -p 8501:8501 ml-imageclassifier
+   docker run -p 5000:5000 ml-imageclassifier
    ```
 
 4. Access the application:
-   Open your web browser and navigate to `http://localhost:8501`
+   Open your web browser and navigate to `http://localhost:5000`
 
 ### Docker Commands Reference
 
@@ -63,6 +63,31 @@ A machine learning-based image classification application built with Python, Ten
   ```
 
 ## Deployment
+
+### Publishing to Docker Hub
+
+1. Create a Docker Hub account at https://hub.docker.com if you don't have one
+
+2. Login to Docker Hub from your terminal:
+   ```bash
+   docker login
+   ```
+
+3. Tag your image with your Docker Hub username:
+   ```bash
+   docker tag ml-imageclassifier yourusername/ml-imageclassifier:latest
+   ```
+
+4. Push the image to Docker Hub:
+   ```bash
+   docker push yourusername/ml-imageclassifier:latest
+   ```
+
+5. Your image is now public! Others can pull and run it using:
+   ```bash
+   docker pull yourusername/ml-imageclassifier:latest
+   docker run -p 8501:8501 yourusername/ml-imageclassifier:latest
+   ```
 
 ### Deploying to a Cloud Platform
 
