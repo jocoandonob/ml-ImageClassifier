@@ -1,4 +1,5 @@
 # ML Image Classifier
+![ml Thumbnail](thumb.png)
 
 A machine learning-based image classification application built with Python, TensorFlow, and Streamlit.
 
